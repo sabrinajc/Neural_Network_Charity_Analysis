@@ -5,20 +5,20 @@ In this project, we are helping Beks to create a binary classifier that us capab
 ## Results:
 ### Data Preprocessing
 - What variable(s) are considered the target(s) for your model?
-Target output is referred to as “y” in TensorFlow, and it is our dependent variable. In our analysis, we would like to see whether or not applicants are successfully funded; therefore, the “IS_SUCCESSFUL” column is our target output. We need to separate this column from the rest of the input data in order to perform our training/test split.
+  - Target output is referred to as “y” in TensorFlow, and it is our dependent variable. In our analysis, we would like to see whether or not applicants are successfully funded; therefore, the “IS_SUCCESSFUL” column is our target output. We need to separate this column from the rest of the input data in order to perform our training/test split.
 - What variable(s) are considered to be the features for your model?
-Input values is referred to features or “X”, which are our independent variables. So our features are “ASK_AMT,” “APPLICATION_TYPE,” “CLASSIFICATION,” “INCOME_AMT,” “SPECIAL_CONSIDERATIONS,” “AFFILIATION_CompanySponsored,” and “STATUS” from the dataset.
+  - Input values is referred to features or “X”, which are our independent variables. So our features are “ASK_AMT,” “APPLICATION_TYPE,” “CLASSIFICATION,” “INCOME_AMT,” “SPECIAL_CONSIDERATIONS,” “AFFILIATION_CompanySponsored,” and “STATUS” from the dataset.
 - What variable(s) are neither targets nor features, and should be removed from the input data?
-We have removed “EIN” and “NAME,” because these two columns have too many unique values and are not imported to the analysis.
+  - We have removed “EIN” and “NAME,” because these two columns have too many unique values and are not imported to the analysis.
 <br> ![x_y.png](images/x_y.png)
 ### Compiling, Training, and Evaluating the Model
 - How many neurons, layers, and activation functions did you select for your neural network model, and why?
-I’ve tried one hidden layer, two hidden layers, three hidden layers and model checkpoints. For neurons, I’ve changed decreased from 100 to 50 to see if there will be any differences. Different activation functions are used for input and output. The reason for that is the result remains at 53.24% so that I have to change different neurons, layers and activation functions to see if the result of accuracy score can increase.
+  - I’ve tried one hidden layer, two hidden layers, three hidden layers and model checkpoints. For neurons, I’ve changed decreased from 100 to 50 to see if there will be any differences. Different activation functions are used for input and output. The reason for that is the result remains at 53.24% so that I have to change different neurons, layers and activation functions to see if the result of accuracy score can increase.
 - Were you able to achieve the target model performance?
-I was unable to achieve 75% of the accuracy, and the highest accuracy score is by the deep neural model that is 73.32%. All of the training results for the three attempts are higher than 73%. However, the testing results stays at 53.24%. The reason for that could be the model is overfitting the data.
+  - I was unable to achieve 75% of the accuracy, and the highest accuracy score is by the deep neural model that is 73.32%. All of the training results for the three attempts are higher than 73%. However, the testing results stays at 53.24%. The reason for that could be the model is overfitting the data.
 <br> ![result.png](images/result.png)
 - What steps did you take to try and increase model performance?
-I try to increase model performance by removing highly distributed columns, binning and then dropping the unneeded columns, changing the number of neurons for different layers, changing the number of layers, and changing the number of epochs.
+  - I try to increase model performance by removing highly distributed columns, binning and then dropping the unneeded columns, changing the number of neurons for different layers, changing the number of layers, and changing the number of epochs.
 ## Summary:
 Looking at all the results provided by the different hidden layers, the accuracy score is the same for the optimization since we have the values to replace if counts are less than 1,000 to 500 for the “CLASSIFICATION” and “APPLICATION” columns. However, the accuracy score is way higher for the values to replace if counts are less than 1,000 comparing to the 500s. 
 <br> ![better.png](images/better.png)
